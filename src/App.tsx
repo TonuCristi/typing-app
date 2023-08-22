@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as S from "./styles";
+import TypingBox from "./components/TypingBox";
 
 const Container = styled.div`
   background: rgb(7, 16, 31);
@@ -22,7 +23,8 @@ const NavBar = styled.nav`
   align-items: center;
   width: 80%;
   margin: 0 auto;
-  padding: 1.2rem 4.8rem;
+  padding: 1.2rem 2.4rem;
+  margin-bottom: 9.6rem;
 `;
 
 const Title = styled.div`
@@ -33,20 +35,6 @@ const Title = styled.div`
   align-items: center;
   gap: 0.2rem;
   text-transform: uppercase;
-`;
-
-const TitleText = styled.div`
-  position: relative;
-
-  &::after {
-    content: "by Tonu";
-    position: absolute;
-    top: 90%;
-    left: 40%;
-    font-size: 1rem;
-    color: #adb5bd;
-    opacity: 0.7;
-  }
 `;
 
 const Icon = styled.div`
@@ -89,7 +77,7 @@ function App() {
     <Container>
       <NavBar>
         <Title>
-          <TitleText>type</TitleText>
+          type
           <Icon>X</Icon>
         </Title>
         <LinkContainer>
@@ -101,6 +89,7 @@ function App() {
           <RegisterBtn>Register</RegisterBtn>
         </AuthContainer>
       </NavBar>
+      <TypingBox></TypingBox>
     </Container>
   );
 }
